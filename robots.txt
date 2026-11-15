@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://medieval-armour-shop-obodaj8n6-atim.vercel.app/sitemap.xml
+Sitemap: https://medieval-armour-shop.vercel.app/sitemap.xml

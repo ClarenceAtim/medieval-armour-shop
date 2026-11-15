@@ -65,6 +65,27 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     updateCartCount();
+    // Mobile hamburger menu
+    var navToggle = document.getElementById('nav-toggle');
+    var mobileNav = document.getElementById('mobilenav');
+    if (navToggle && mobileNav) {
+      navToggle.addEventListener('click', function () {
+        var open = mobileNav.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      mobileNav.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') {
+          mobileNav.classList.remove('open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && mobileNav.classList.contains('open')) {
+          mobileNav.classList.remove('open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
     // Product page add-to-cart
     var btn = document.getElementById('add-btn');
     if (btn) {
