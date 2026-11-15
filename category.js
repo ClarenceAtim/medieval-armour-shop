@@ -22,9 +22,9 @@
       stars = '<div class="stars">' + '\u2605'.repeat(p.rating) +
         (p.rcount ? ' <span class="n">(' + p.rcount + ')</span>' : '') + '</div>';
     }
-    return '<article class="card"><a class="thumb" href="/shop/product/' + p.slug + '/">' +
+    return '<article class="card"><a class="thumb" href="/product/' + p.slug + '/">' +
       '<img src="' + MAS.escapeHtml(p.img) + '" alt="' + MAS.escapeHtml(p.name) + '" loading="lazy"></a>' +
-      '<div class="body"><h3><a href="/shop/product/' + p.slug + '/">' + MAS.escapeHtml(p.name) + '</a></h3>' +
+      '<div class="body"><h3><a href="/product/' + p.slug + '/">' + MAS.escapeHtml(p.name) + '</a></h3>' +
       (p.sub ? '<div class="cat">' + MAS.escapeHtml(p.sub) + '</div>' : '') +
       stars + '<div class="price">' + price + old + badge + '</div></div></article>';
   }
@@ -119,9 +119,9 @@
         if (ev.key === 'Enter') { ev.preventDefault(); currentPage = 1; loadAndRender(); }
       });
     });
-    // Deep-link: ?sub=<slug> pre-selects the subcategory filter (used by
-    // the mobile menu's subcategory links). Only applied when the value
-    // matches a real option; anything else is ignored (show everything).
+    // Deep-link: ?sub=<slug> pre-selects the subcategory filter.
+    // Only applied when the value matches a real option; anything else
+    // is ignored (show everything).
     var subSel = el('subfilter');
     if (subSel) {
       var wanted = new URLSearchParams(window.location.search).get('sub');

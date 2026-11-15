@@ -21,9 +21,9 @@
       old = '<span class="old">' + MAS.formatEUR(p.old) + '</span>';
       badge = '<span class="badge-off">-' + Math.round(100 * (p.old - p.price) / p.old) + '%</span>';
     }
-    return '<article class="card"><a class="thumb" href="/shop/product/' + p.slug + '/">' +
+    return '<article class="card"><a class="thumb" href="/product/' + p.slug + '/">' +
       '<img src="' + MAS.escapeHtml(p.img) + '" alt="' + MAS.escapeHtml(p.name) + '" loading="lazy"></a>' +
-      '<div class="body"><h3><a href="/shop/product/' + p.slug + '/">' + MAS.escapeHtml(p.name) + '</a></h3>' +
+      '<div class="body"><h3><a href="/product/' + p.slug + '/">' + MAS.escapeHtml(p.name) + '</a></h3>' +
       '<div class="cat">' + MAS.escapeHtml(p.cat) + '</div>' +
       '<div class="price">' + price + old + badge + '</div></div></article>';
   }

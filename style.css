@@ -132,29 +132,6 @@ h1, h2, h3, .serif { font-family: Georgia, "Times New Roman", serif; }
     border-radius: 6px;
   }
   .mobilenav a:hover, .mobilenav a.active { background: var(--gold); color: #fff; }
-  /* Nested menu: Shop > categories > subcategories. Each row is a flex
-     line — the link takes the remaining width, the 44px chevron button
-     sits inside the screen, so nothing is ever cut off at the right edge. */
-  .mobilenav .mnav-row { display: flex; align-items: stretch; }
-  .mobilenav .mnav-row a { flex: 1 1 auto; min-width: 0; }
-  .mobilenav .mnav-toggle {
-    flex: 0 0 44px;
-    width: 44px;
-    min-height: 44px;
-    background: transparent;
-    border: none;
-    color: #d8cfba;
-    font-size: .85rem;
-    cursor: pointer;
-    border-radius: 6px;
-  }
-  .mobilenav .mnav-toggle:hover, .mobilenav .mnav-toggle:focus-visible { background: var(--gold); color: #fff; }
-  .mobilenav .mnav-toggle .chev { display: inline-block; transition: transform .18s ease; }
-  .mobilenav .mnav-toggle[aria-expanded="true"] .chev { transform: rotate(180deg); }
-  .mobilenav .mnav-sub { display: none; }
-  .mobilenav .mnav-sub.open { display: block; }
-  .mobilenav .mnav-sub .mnav-row a, .mobilenav .mnav-sub > a { padding-left: 1.5rem; }
-  .mobilenav .mnav-sub .mnav-sub .mnav-row a, .mobilenav .mnav-sub .mnav-sub > a { padding-left: 2.5rem; }
   .mobilenav .mnav-help { border-top: 1px solid #3a352e; margin-top: .5rem; padding-top: .5rem; }
 }
 @media (min-width: 760px) {
