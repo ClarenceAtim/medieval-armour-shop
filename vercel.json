@@ -1,6 +1,536 @@
 {
+  "redirects": [
+    {
+      "source": "/product/:slug",
+      "destination": "/shop/product/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/product/:slug/",
+      "destination": "/shop/product/:slug/",
+      "permanent": true
+    },
+    {
+      "source": "/helmets",
+      "destination": "/shop/helmets",
+      "permanent": true
+    },
+    {
+      "source": "/helmets/",
+      "destination": "/shop/helmets/",
+      "permanent": true
+    },
+    {
+      "source": "/helmets/page-:n",
+      "destination": "/shop/helmets/page-:n",
+      "permanent": true
+    },
+    {
+      "source": "/helmets/page-:n/",
+      "destination": "/shop/helmets/page-:n/",
+      "permanent": true
+    },
+    {
+      "source": "/armour",
+      "destination": "/shop/armour",
+      "permanent": true
+    },
+    {
+      "source": "/armour/",
+      "destination": "/shop/armour/",
+      "permanent": true
+    },
+    {
+      "source": "/armour/page-:n",
+      "destination": "/shop/armour/page-:n",
+      "permanent": true
+    },
+    {
+      "source": "/armour/page-:n/",
+      "destination": "/shop/armour/page-:n/",
+      "permanent": true
+    },
+    {
+      "source": "/swords",
+      "destination": "/shop/swords",
+      "permanent": true
+    },
+    {
+      "source": "/swords/",
+      "destination": "/shop/swords/",
+      "permanent": true
+    },
+    {
+      "source": "/swords/page-:n",
+      "destination": "/shop/swords/page-:n",
+      "permanent": true
+    },
+    {
+      "source": "/swords/page-:n/",
+      "destination": "/shop/swords/page-:n/",
+      "permanent": true
+    },
+    {
+      "source": "/medieval-weapons",
+      "destination": "/shop/medieval-weapons",
+      "permanent": true
+    },
+    {
+      "source": "/medieval-weapons/",
+      "destination": "/shop/medieval-weapons/",
+      "permanent": true
+    },
+    {
+      "source": "/medieval-weapons/page-:n",
+      "destination": "/shop/medieval-weapons/page-:n",
+      "permanent": true
+    },
+    {
+      "source": "/medieval-weapons/page-:n/",
+      "destination": "/shop/medieval-weapons/page-:n/",
+      "permanent": true
+    },
+    {
+      "source": "/templars",
+      "destination": "/shop/templars",
+      "permanent": true
+    },
+    {
+      "source": "/templars/",
+      "destination": "/shop/templars/",
+      "permanent": true
+    },
+    {
+      "source": "/templars/page-:n",
+      "destination": "/shop/templars/page-:n",
+      "permanent": true
+    },
+    {
+      "source": "/templars/page-:n/",
+      "destination": "/shop/templars/page-:n/",
+      "permanent": true
+    },
+    {
+      "source": "/ancient-rome",
+      "destination": "/shop/ancient-rome",
+      "permanent": true
+    },
+    {
+      "source": "/ancient-rome/",
+      "destination": "/shop/ancient-rome/",
+      "permanent": true
+    },
+    {
+      "source": "/ancient-rome/page-:n",
+      "destination": "/shop/ancient-rome/page-:n",
+      "permanent": true
+    },
+    {
+      "source": "/ancient-rome/page-:n/",
+      "destination": "/shop/ancient-rome/page-:n/",
+      "permanent": true
+    },
+    {
+      "source": "/costumes",
+      "destination": "/shop/costumes",
+      "permanent": true
+    },
+    {
+      "source": "/costumes/",
+      "destination": "/shop/costumes/",
+      "permanent": true
+    },
+    {
+      "source": "/costumes/page-:n",
+      "destination": "/shop/costumes/page-:n",
+      "permanent": true
+    },
+    {
+      "source": "/costumes/page-:n/",
+      "destination": "/shop/costumes/page-:n/",
+      "permanent": true
+    },
+    {
+      "source": "/footwear",
+      "destination": "/shop/footwear",
+      "permanent": true
+    },
+    {
+      "source": "/footwear/",
+      "destination": "/shop/footwear/",
+      "permanent": true
+    },
+    {
+      "source": "/footwear/page-:n",
+      "destination": "/shop/footwear/page-:n",
+      "permanent": true
+    },
+    {
+      "source": "/footwear/page-:n/",
+      "destination": "/shop/footwear/page-:n/",
+      "permanent": true
+    },
+    {
+      "source": "/cinema",
+      "destination": "/shop/cinema",
+      "permanent": true
+    },
+    {
+      "source": "/cinema/",
+      "destination": "/shop/cinema/",
+      "permanent": true
+    },
+    {
+      "source": "/cinema/page-:n",
+      "destination": "/shop/cinema/page-:n",
+      "permanent": true
+    },
+    {
+      "source": "/cinema/page-:n/",
+      "destination": "/shop/cinema/page-:n/",
+      "permanent": true
+    },
+    {
+      "source": "/elves-fairies",
+      "destination": "/shop/elves-fairies",
+      "permanent": true
+    },
+    {
+      "source": "/elves-fairies/",
+      "destination": "/shop/elves-fairies/",
+      "permanent": true
+    },
+    {
+      "source": "/elves-fairies/page-:n",
+      "destination": "/shop/elves-fairies/page-:n",
+      "permanent": true
+    },
+    {
+      "source": "/elves-fairies/page-:n/",
+      "destination": "/shop/elves-fairies/page-:n/",
+      "permanent": true
+    },
+    {
+      "source": "/dolls",
+      "destination": "/shop/dolls",
+      "permanent": true
+    },
+    {
+      "source": "/dolls/",
+      "destination": "/shop/dolls/",
+      "permanent": true
+    },
+    {
+      "source": "/dolls/page-:n",
+      "destination": "/shop/dolls/page-:n",
+      "permanent": true
+    },
+    {
+      "source": "/dolls/page-:n/",
+      "destination": "/shop/dolls/page-:n/",
+      "permanent": true
+    },
+    {
+      "source": "/trolls",
+      "destination": "/shop/trolls",
+      "permanent": true
+    },
+    {
+      "source": "/trolls/",
+      "destination": "/shop/trolls/",
+      "permanent": true
+    },
+    {
+      "source": "/trolls/page-:n",
+      "destination": "/shop/trolls/page-:n",
+      "permanent": true
+    },
+    {
+      "source": "/trolls/page-:n/",
+      "destination": "/shop/trolls/page-:n/",
+      "permanent": true
+    },
+    {
+      "source": "/cart",
+      "destination": "/shop/cart",
+      "permanent": true
+    },
+    {
+      "source": "/cart/",
+      "destination": "/shop/cart/",
+      "permanent": true
+    },
+    {
+      "source": "/checkout",
+      "destination": "/shop/checkout",
+      "permanent": true
+    },
+    {
+      "source": "/checkout/",
+      "destination": "/shop/checkout/",
+      "permanent": true
+    },
+    {
+      "source": "/search",
+      "destination": "/shop/search",
+      "permanent": true
+    },
+    {
+      "source": "/search/",
+      "destination": "/shop/search/",
+      "permanent": true
+    },
+    {
+      "source": "/order-confirmation",
+      "destination": "/shop/order-confirmation",
+      "permanent": true
+    },
+    {
+      "source": "/order-confirmation/",
+      "destination": "/shop/order-confirmation/",
+      "permanent": true
+    }
+  ],
   "rewrites": [
-    {"source": "/product/:slug", "destination": "/product/:slug.html"},
-    {"source": "/product/:slug/", "destination": "/product/:slug.html"}
+    {
+      "source": "/shop/product/1:slug",
+      "destination": "/shop/product/0/1:slug.html"
+    },
+    {
+      "source": "/shop/product/1:slug/",
+      "destination": "/shop/product/0/1:slug.html"
+    },
+    {
+      "source": "/shop/product/3:slug",
+      "destination": "/shop/product/0/3:slug.html"
+    },
+    {
+      "source": "/shop/product/3:slug/",
+      "destination": "/shop/product/0/3:slug.html"
+    },
+    {
+      "source": "/shop/product/4:slug",
+      "destination": "/shop/product/0/4:slug.html"
+    },
+    {
+      "source": "/shop/product/4:slug/",
+      "destination": "/shop/product/0/4:slug.html"
+    },
+    {
+      "source": "/shop/product/8:slug",
+      "destination": "/shop/product/0/8:slug.html"
+    },
+    {
+      "source": "/shop/product/8:slug/",
+      "destination": "/shop/product/0/8:slug.html"
+    },
+    {
+      "source": "/shop/product/a:slug",
+      "destination": "/shop/product/a/a:slug.html"
+    },
+    {
+      "source": "/shop/product/a:slug/",
+      "destination": "/shop/product/a/a:slug.html"
+    },
+    {
+      "source": "/shop/product/b:slug",
+      "destination": "/shop/product/b/b:slug.html"
+    },
+    {
+      "source": "/shop/product/b:slug/",
+      "destination": "/shop/product/b/b:slug.html"
+    },
+    {
+      "source": "/shop/product/c:slug",
+      "destination": "/shop/product/c/c:slug.html"
+    },
+    {
+      "source": "/shop/product/c:slug/",
+      "destination": "/shop/product/c/c:slug.html"
+    },
+    {
+      "source": "/shop/product/d:slug",
+      "destination": "/shop/product/d/d:slug.html"
+    },
+    {
+      "source": "/shop/product/d:slug/",
+      "destination": "/shop/product/d/d:slug.html"
+    },
+    {
+      "source": "/shop/product/e:slug",
+      "destination": "/shop/product/e/e:slug.html"
+    },
+    {
+      "source": "/shop/product/e:slug/",
+      "destination": "/shop/product/e/e:slug.html"
+    },
+    {
+      "source": "/shop/product/f:slug",
+      "destination": "/shop/product/f/f:slug.html"
+    },
+    {
+      "source": "/shop/product/f:slug/",
+      "destination": "/shop/product/f/f:slug.html"
+    },
+    {
+      "source": "/shop/product/g:slug",
+      "destination": "/shop/product/g/g:slug.html"
+    },
+    {
+      "source": "/shop/product/g:slug/",
+      "destination": "/shop/product/g/g:slug.html"
+    },
+    {
+      "source": "/shop/product/h:slug",
+      "destination": "/shop/product/h/h:slug.html"
+    },
+    {
+      "source": "/shop/product/h:slug/",
+      "destination": "/shop/product/h/h:slug.html"
+    },
+    {
+      "source": "/shop/product/i:slug",
+      "destination": "/shop/product/i/i:slug.html"
+    },
+    {
+      "source": "/shop/product/i:slug/",
+      "destination": "/shop/product/i/i:slug.html"
+    },
+    {
+      "source": "/shop/product/j:slug",
+      "destination": "/shop/product/j/j:slug.html"
+    },
+    {
+      "source": "/shop/product/j:slug/",
+      "destination": "/shop/product/j/j:slug.html"
+    },
+    {
+      "source": "/shop/product/k:slug",
+      "destination": "/shop/product/k/k:slug.html"
+    },
+    {
+      "source": "/shop/product/k:slug/",
+      "destination": "/shop/product/k/k:slug.html"
+    },
+    {
+      "source": "/shop/product/l:slug",
+      "destination": "/shop/product/l/l:slug.html"
+    },
+    {
+      "source": "/shop/product/l:slug/",
+      "destination": "/shop/product/l/l:slug.html"
+    },
+    {
+      "source": "/shop/product/m:slug",
+      "destination": "/shop/product/m/m:slug.html"
+    },
+    {
+      "source": "/shop/product/m:slug/",
+      "destination": "/shop/product/m/m:slug.html"
+    },
+    {
+      "source": "/shop/product/n:slug",
+      "destination": "/shop/product/n/n:slug.html"
+    },
+    {
+      "source": "/shop/product/n:slug/",
+      "destination": "/shop/product/n/n:slug.html"
+    },
+    {
+      "source": "/shop/product/o:slug",
+      "destination": "/shop/product/o/o:slug.html"
+    },
+    {
+      "source": "/shop/product/o:slug/",
+      "destination": "/shop/product/o/o:slug.html"
+    },
+    {
+      "source": "/shop/product/p:slug",
+      "destination": "/shop/product/p/p:slug.html"
+    },
+    {
+      "source": "/shop/product/p:slug/",
+      "destination": "/shop/product/p/p:slug.html"
+    },
+    {
+      "source": "/shop/product/r:slug",
+      "destination": "/shop/product/r/r:slug.html"
+    },
+    {
+      "source": "/shop/product/r:slug/",
+      "destination": "/shop/product/r/r:slug.html"
+    },
+    {
+      "source": "/shop/product/s:slug",
+      "destination": "/shop/product/s/s:slug.html"
+    },
+    {
+      "source": "/shop/product/s:slug/",
+      "destination": "/shop/product/s/s:slug.html"
+    },
+    {
+      "source": "/shop/product/t:slug",
+      "destination": "/shop/product/t/t:slug.html"
+    },
+    {
+      "source": "/shop/product/t:slug/",
+      "destination": "/shop/product/t/t:slug.html"
+    },
+    {
+      "source": "/shop/product/u:slug",
+      "destination": "/shop/product/u/u:slug.html"
+    },
+    {
+      "source": "/shop/product/u:slug/",
+      "destination": "/shop/product/u/u:slug.html"
+    },
+    {
+      "source": "/shop/product/v:slug",
+      "destination": "/shop/product/v/v:slug.html"
+    },
+    {
+      "source": "/shop/product/v:slug/",
+      "destination": "/shop/product/v/v:slug.html"
+    },
+    {
+      "source": "/shop/product/w:slug",
+      "destination": "/shop/product/w/w:slug.html"
+    },
+    {
+      "source": "/shop/product/w:slug/",
+      "destination": "/shop/product/w/w:slug.html"
+    },
+    {
+      "source": "/shop/product/x:slug",
+      "destination": "/shop/product/x/x:slug.html"
+    },
+    {
+      "source": "/shop/product/x:slug/",
+      "destination": "/shop/product/x/x:slug.html"
+    },
+    {
+      "source": "/shop/product/z:slug",
+      "destination": "/shop/product/z/z:slug.html"
+    },
+    {
+      "source": "/shop/product/z:slug/",
+      "destination": "/shop/product/z/z:slug.html"
+    },
+    {
+      "source": "/shop/:category/page-:n",
+      "destination": "/shop/:category-page-:n.html"
+    },
+    {
+      "source": "/shop/:category/page-:n/",
+      "destination": "/shop/:category-page-:n.html"
+    },
+    {
+      "source": "/shop/:category",
+      "destination": "/shop/:category.html"
+    },
+    {
+      "source": "/shop/:category/",
+      "destination": "/shop/:category.html"
+    }
   ]
 }

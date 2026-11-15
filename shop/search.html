@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Search | Medieval Armour Shop</title>
+<meta name="description" content="Search Medieval Armour Shop — helmets, armour, swords, chainmail and more, prices in euros.">
+<link rel="canonical" href="https://medieval-armour-shop.vercel.app/shop/search/">
+<meta property="og:title" content="Search | Medieval Armour Shop">
+<meta property="og:description" content="Search Medieval Armour Shop — helmets, armour, swords, chainmail and more, prices in euros.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://medieval-armour-shop.vercel.app/shop/search/">
+<link rel="stylesheet" href="/style.css">
+<script src="/shop.js" defer></script>
+<script src="/search.js" defer></script>
+</head>
+<body>
+<header>
+<div class="topbar">
+<button class="burger" id="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="mobilenav">&#9776;</button>
+<a class="brand" href="/">MEDIEVAL <span>ARMOUR</span> SHOP</a>
+<form class="searchbox" action="/shop/search/" method="get" role="search">
+<input type="search" name="q" placeholder="Search helmets, swords, armour&hellip;" aria-label="Search products">
+<button type="submit" aria-label="Search">&#8981;</button>
+</form>
+<a class="cartlink" href="/shop/cart/">Cart (<span id="cart-count">0</span>)</a>
+</div>
+<nav class="catnav" aria-label="Categories"><a href="/shop/helmets/">Medieval Helmets</a><a href="/shop/armour/">Medieval Armour</a><a href="/shop/swords/">Medieval Swords</a><a href="/shop/medieval-weapons/">Medieval Weapons</a><a href="/shop/templars/">Templar Gear</a><a href="/shop/ancient-rome/">Ancient Rome</a><a href="/shop/costumes/">Medieval Costumes</a><a href="/shop/footwear/">Medieval Footwear</a><a href="/shop/cinema/">Cinema &amp; Film Replicas</a><a href="/shop/elves-fairies/">Elves &amp; Fairies</a><a href="/shop/dolls/">Collector Dolls</a><a href="/shop/trolls/">Trolls</a></nav>
+<nav class="mobilenav" id="mobilenav" aria-label="Menu"><a href="/shop/helmets/">Medieval Helmets</a><a href="/shop/armour/">Medieval Armour</a><a href="/shop/swords/">Medieval Swords</a><a href="/shop/medieval-weapons/">Medieval Weapons</a><a href="/shop/templars/">Templar Gear</a><a href="/shop/ancient-rome/">Ancient Rome</a><a href="/shop/costumes/">Medieval Costumes</a><a href="/shop/footwear/">Medieval Footwear</a><a href="/shop/cinema/">Cinema &amp; Film Replicas</a><a href="/shop/elves-fairies/">Elves &amp; Fairies</a><a href="/shop/dolls/">Collector Dolls</a><a href="/shop/trolls/">Trolls</a><div class="mnav-help"><a href="/about/">About the shop</a><a href="/shipping/">Shipping</a><a href="/returns/">Returns</a><a href="/contact/">Contact</a><a href="/faq/">FAQ</a></div></nav>
+</header>
+<main class="wrap">
+<h1>Search</h1>
+<h2 id="search-heading">Search the shop</h2>
+<p class="result-count" id="result-count"></p>
+<div class="grid" id="search-results"></div>
+<nav class="pagination" id="js-pagination" aria-label="Pages"></nav>
+</main>
+<footer>
+<div class="foot">
+<div>
+<h3>Medieval Armour Shop</h3>
+<p>Medieval helmets, armour, swords and more — prices in euros, shipped across Europe. Orders are order requests: the shop confirms your order and payment details by email. No payment is taken on this site.</p>
+</div>
+<div>
+<h3>Shop</h3>
+<a href="/shop/helmets/">Medieval Helmets</a><a href="/shop/armour/">Medieval Armour</a><a href="/shop/swords/">Medieval Swords</a><a href="/shop/medieval-weapons/">Medieval Weapons</a><a href="/shop/templars/">Templar Gear</a><a href="/shop/ancient-rome/">Ancient Rome</a><a href="/shop/costumes/">Medieval Costumes</a><a href="/shop/footwear/">Medieval Footwear</a><a href="/shop/cinema/">Cinema &amp; Film Replicas</a><a href="/shop/elves-fairies/">Elves &amp; Fairies</a><a href="/shop/dolls/">Collector Dolls</a><a href="/shop/trolls/">Trolls</a>
+</div>
+<div>
+<h3>Help</h3>
+<a href="/about/">About the shop</a>
+<a href="/shipping/">Shipping</a>
+<a href="/returns/">Returns</a>
+<a href="/contact/">Contact</a>
+<a href="/faq/">FAQ</a>
+<a href="/shop/cart/">Your cart</a>
+</div>
+</div>
+<div class="copy">&copy; 2026 Medieval Armour Shop. All rights reserved.</div>
+</footer>
+<div id="toast" role="status"></div>
+</body>
+</html>

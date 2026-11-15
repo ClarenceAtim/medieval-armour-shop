@@ -25,9 +25,9 @@
     cart.forEach(function (it, i) {
       var line = it.price * it.qty;
       total += line;
-      html += '<tr><td><a href="/product/' + it.slug + '/"><img src="' +
+      html += '<tr><td><a href="/shop/product/' + it.slug + '/"><img src="' +
         MAS.escapeHtml(it.img) + '" alt=""></a></td>' +
-        '<td><a href="/product/' + it.slug + '/">' + MAS.escapeHtml(it.name) + '</a></td>' +
+        '<td><a href="/shop/product/' + it.slug + '/">' + MAS.escapeHtml(it.name) + '</a></td>' +
         '<td>' + MAS.formatEUR(it.price) + '</td>' +
         '<td><input type="number" min="1" max="99" value="' + it.qty +
         '" data-qty="' + i + '" aria-label="Quantity"></td>' +
@@ -128,7 +128,7 @@
     orders.push(order);
     MAS.writeLS(MAS.ORDERS_KEY, orders);
     MAS.saveCart([]);
-    location.href = '/order-confirmation/?order=' + encodeURIComponent(order.number);
+    location.href = '/shop/order-confirmation/?order=' + encodeURIComponent(order.number);
   }
 
   /* ---------------- confirmation page ---------------- */
