@@ -181,6 +181,26 @@
       "permanent": true
     },
     {
+      "source": "/shop/tents",
+      "destination": "/tents",
+      "permanent": true
+    },
+    {
+      "source": "/shop/tents/",
+      "destination": "/tents/",
+      "permanent": true
+    },
+    {
+      "source": "/shop/tents/page-:n",
+      "destination": "/tents/page-:n",
+      "permanent": true
+    },
+    {
+      "source": "/shop/tents/page-:n/",
+      "destination": "/tents/page-:n/",
+      "permanent": true
+    },
+    {
       "source": "/shop/cinema",
       "destination": "/cinema",
       "permanent": true
@@ -303,12 +323,228 @@
   ],
   "rewrites": [
     {
-      "source": "/product/:slug",
-      "destination": "/product/:slug.html"
+      "source": "/product/1:slug",
+      "destination": "/product/0/1:slug.html"
     },
     {
-      "source": "/product/:slug/",
-      "destination": "/product/:slug.html"
+      "source": "/product/1:slug/",
+      "destination": "/product/0/1:slug.html"
+    },
+    {
+      "source": "/product/3:slug",
+      "destination": "/product/0/3:slug.html"
+    },
+    {
+      "source": "/product/3:slug/",
+      "destination": "/product/0/3:slug.html"
+    },
+    {
+      "source": "/product/4:slug",
+      "destination": "/product/0/4:slug.html"
+    },
+    {
+      "source": "/product/4:slug/",
+      "destination": "/product/0/4:slug.html"
+    },
+    {
+      "source": "/product/8:slug",
+      "destination": "/product/0/8:slug.html"
+    },
+    {
+      "source": "/product/8:slug/",
+      "destination": "/product/0/8:slug.html"
+    },
+    {
+      "source": "/product/a:slug",
+      "destination": "/product/a/a:slug.html"
+    },
+    {
+      "source": "/product/a:slug/",
+      "destination": "/product/a/a:slug.html"
+    },
+    {
+      "source": "/product/b:slug",
+      "destination": "/product/b/b:slug.html"
+    },
+    {
+      "source": "/product/b:slug/",
+      "destination": "/product/b/b:slug.html"
+    },
+    {
+      "source": "/product/c:slug",
+      "destination": "/product/c/c:slug.html"
+    },
+    {
+      "source": "/product/c:slug/",
+      "destination": "/product/c/c:slug.html"
+    },
+    {
+      "source": "/product/d:slug",
+      "destination": "/product/d/d:slug.html"
+    },
+    {
+      "source": "/product/d:slug/",
+      "destination": "/product/d/d:slug.html"
+    },
+    {
+      "source": "/product/e:slug",
+      "destination": "/product/e/e:slug.html"
+    },
+    {
+      "source": "/product/e:slug/",
+      "destination": "/product/e/e:slug.html"
+    },
+    {
+      "source": "/product/f:slug",
+      "destination": "/product/f/f:slug.html"
+    },
+    {
+      "source": "/product/f:slug/",
+      "destination": "/product/f/f:slug.html"
+    },
+    {
+      "source": "/product/g:slug",
+      "destination": "/product/g/g:slug.html"
+    },
+    {
+      "source": "/product/g:slug/",
+      "destination": "/product/g/g:slug.html"
+    },
+    {
+      "source": "/product/h:slug",
+      "destination": "/product/h/h:slug.html"
+    },
+    {
+      "source": "/product/h:slug/",
+      "destination": "/product/h/h:slug.html"
+    },
+    {
+      "source": "/product/i:slug",
+      "destination": "/product/i/i:slug.html"
+    },
+    {
+      "source": "/product/i:slug/",
+      "destination": "/product/i/i:slug.html"
+    },
+    {
+      "source": "/product/j:slug",
+      "destination": "/product/j/j:slug.html"
+    },
+    {
+      "source": "/product/j:slug/",
+      "destination": "/product/j/j:slug.html"
+    },
+    {
+      "source": "/product/k:slug",
+      "destination": "/product/k/k:slug.html"
+    },
+    {
+      "source": "/product/k:slug/",
+      "destination": "/product/k/k:slug.html"
+    },
+    {
+      "source": "/product/l:slug",
+      "destination": "/product/l/l:slug.html"
+    },
+    {
+      "source": "/product/l:slug/",
+      "destination": "/product/l/l:slug.html"
+    },
+    {
+      "source": "/product/m:slug",
+      "destination": "/product/m/m:slug.html"
+    },
+    {
+      "source": "/product/m:slug/",
+      "destination": "/product/m/m:slug.html"
+    },
+    {
+      "source": "/product/n:slug",
+      "destination": "/product/n/n:slug.html"
+    },
+    {
+      "source": "/product/n:slug/",
+      "destination": "/product/n/n:slug.html"
+    },
+    {
+      "source": "/product/o:slug",
+      "destination": "/product/o/o:slug.html"
+    },
+    {
+      "source": "/product/o:slug/",
+      "destination": "/product/o/o:slug.html"
+    },
+    {
+      "source": "/product/p:slug",
+      "destination": "/product/p/p:slug.html"
+    },
+    {
+      "source": "/product/p:slug/",
+      "destination": "/product/p/p:slug.html"
+    },
+    {
+      "source": "/product/r:slug",
+      "destination": "/product/r/r:slug.html"
+    },
+    {
+      "source": "/product/r:slug/",
+      "destination": "/product/r/r:slug.html"
+    },
+    {
+      "source": "/product/s:slug",
+      "destination": "/product/s/s:slug.html"
+    },
+    {
+      "source": "/product/s:slug/",
+      "destination": "/product/s/s:slug.html"
+    },
+    {
+      "source": "/product/t:slug",
+      "destination": "/product/t/t:slug.html"
+    },
+    {
+      "source": "/product/t:slug/",
+      "destination": "/product/t/t:slug.html"
+    },
+    {
+      "source": "/product/u:slug",
+      "destination": "/product/u/u:slug.html"
+    },
+    {
+      "source": "/product/u:slug/",
+      "destination": "/product/u/u:slug.html"
+    },
+    {
+      "source": "/product/v:slug",
+      "destination": "/product/v/v:slug.html"
+    },
+    {
+      "source": "/product/v:slug/",
+      "destination": "/product/v/v:slug.html"
+    },
+    {
+      "source": "/product/w:slug",
+      "destination": "/product/w/w:slug.html"
+    },
+    {
+      "source": "/product/w:slug/",
+      "destination": "/product/w/w:slug.html"
+    },
+    {
+      "source": "/product/x:slug",
+      "destination": "/product/x/x:slug.html"
+    },
+    {
+      "source": "/product/x:slug/",
+      "destination": "/product/x/x:slug.html"
+    },
+    {
+      "source": "/product/z:slug",
+      "destination": "/product/z/z:slug.html"
+    },
+    {
+      "source": "/product/z:slug/",
+      "destination": "/product/z/z:slug.html"
     },
     {
       "source": "/:category/page-:n",
@@ -381,6 +617,14 @@
     {
       "source": "/footwear/",
       "destination": "/footwear.html"
+    },
+    {
+      "source": "/tents",
+      "destination": "/tents.html"
+    },
+    {
+      "source": "/tents/",
+      "destination": "/tents.html"
     },
     {
       "source": "/cinema",
