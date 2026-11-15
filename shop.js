@@ -65,25 +65,40 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     updateCartCount();
-    // Mobile hamburger menu
+    // Mobile hamburger menu (nested: Shop > categories > subcategories)
     var navToggle = document.getElementById('nav-toggle');
     var mobileNav = document.getElementById('mobilenav');
     if (navToggle && mobileNav) {
+      function closePanel() {
+        mobileNav.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        // collapse any expanded sub-menus so the menu reopens tidy
+        var subs = mobileNav.querySelectorAll('.mnav-sub.open');
+        for (var s = 0; s < subs.length; s++) subs[s].classList.remove('open');
+        var tg = mobileNav.querySelectorAll('.mnav-toggle[aria-expanded="true"]');
+        for (var t = 0; t < tg.length; t++) tg[t].setAttribute('aria-expanded', 'false');
+      }
       navToggle.addEventListener('click', function () {
-        var open = mobileNav.classList.toggle('open');
-        navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-      mobileNav.addEventListener('click', function (e) {
-        if (e.target.tagName === 'A') {
-          mobileNav.classList.remove('open');
-          navToggle.setAttribute('aria-expanded', 'false');
+        if (mobileNav.classList.contains('open')) closePanel();
+        else {
+          mobileNav.classList.add('open');
+          navToggle.setAttribute('aria-expanded', 'true');
         }
+      });
+      var toggles = mobileNav.querySelectorAll('.mnav-toggle');
+      for (var i = 0; i < toggles.length; i++) {
+        toggles[i].addEventListener('click', function () {
+          var target = document.getElementById(this.getAttribute('aria-controls'));
+          if (!target) return;
+          var open = target.classList.toggle('open');
+          this.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+      }
+      mobileNav.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') closePanel();
       });
       document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape' && mobileNav.classList.contains('open')) {
-          mobileNav.classList.remove('open');
-          navToggle.setAttribute('aria-expanded', 'false');
-        }
+        if (e.key === 'Escape' && mobileNav.classList.contains('open')) closePanel();
       });
     }
     // Product page add-to-cart

@@ -119,5 +119,22 @@
         if (ev.key === 'Enter') { ev.preventDefault(); currentPage = 1; loadAndRender(); }
       });
     });
+    // Deep-link: ?sub=<slug> pre-selects the subcategory filter (used by
+    // the mobile menu's subcategory links). Only applied when the value
+    // matches a real option; anything else is ignored (show everything).
+    var subSel = el('subfilter');
+    if (subSel) {
+      var wanted = new URLSearchParams(window.location.search).get('sub');
+      if (wanted) {
+        for (var i = 0; i < subSel.options.length; i++) {
+          if (subSel.options[i].value === wanted) {
+            subSel.value = wanted;
+            currentPage = 1;
+            loadAndRender();
+            break;
+          }
+        }
+      }
+    }
   });
 })();
