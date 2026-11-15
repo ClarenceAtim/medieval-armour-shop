@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkout | Medieval Armour Shop</title>
+<meta name="description" content="Checkout at Medieval Armour Shop. Place an order request — no payment is taken on this site; the shop confirms your order by email.">
+<link rel="canonical" href="https://medieval-armour-shop-obodaj8n6-atim.vercel.app/checkout/">
+<meta property="og:title" content="Checkout | Medieval Armour Shop">
+<meta property="og:description" content="Checkout at Medieval Armour Shop. Place an order request — no payment is taken on this site; the shop confirms your order by email.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://medieval-armour-shop-obodaj8n6-atim.vercel.app/checkout/">
+<link rel="stylesheet" href="/style.css">
+<script src="/shop.js" defer></script>
+<script src="/checkout.js" defer></script>
+</head>
+<body>
+<header>
+<div class="topbar">
+<a class="brand" href="/">MEDIEVAL <span>ARMOUR</span> SHOP</a>
+<form class="searchbox" action="/search/" method="get" role="search">
+<input type="search" name="q" placeholder="Search helmets, swords, armour&hellip;" aria-label="Search products">
+<button type="submit" aria-label="Search">&#8981;</button>
+</form>
+<a class="cartlink" href="/cart/">Cart (<span id="cart-count">0</span>)</a>
+</div>
+<nav class="catnav" aria-label="Categories"><a href="/helmets/">Medieval Helmets</a><a href="/armour/">Medieval Armour</a><a href="/swords/">Medieval Swords</a><a href="/medieval-weapons/">Medieval Weapons</a><a href="/templars/">Templar Gear</a><a href="/ancient-rome/">Ancient Rome</a><a href="/costumes/">Medieval Costumes</a><a href="/footwear/">Medieval Footwear</a><a href="/cinema/">Cinema &amp; Film Replicas</a><a href="/elves-fairies/">Elves &amp; Fairies</a><a href="/dolls/">Collector Dolls</a><a href="/trolls/">Trolls</a></nav>
+</header>
+<main class="wrap">
+<h1>Checkout</h1>
+<div class="note"><strong>Order request:</strong> no payment is taken on this site. Place your order and the shop confirms it and sends payment details by email.</div>
+<h2>Order summary</h2>
+<div id="checkout-summary"><p>Loading your cart&hellip;</p></div>
+<h2>Your details</h2>
+<form class="form" id="checkout-form" novalidate>
+<div class="field"><label for="f-name">Full name <span class="req">*</span></label>
+<input id="f-name" name="name" type="text" autocomplete="name" required>
+<div class="err" id="f-name-err"></div></div>
+<div class="field"><label for="f-email">Email <span class="req">*</span></label>
+<input id="f-email" name="email" type="email" autocomplete="email" required>
+<div class="err" id="f-email-err"></div></div>
+<div class="field"><label for="f-address">Delivery address <span class="req">*</span></label>
+<input id="f-address" name="address" type="text" autocomplete="street-address" required>
+<div class="err" id="f-address-err"></div></div>
+<div class="field"><label for="f-city">City / town <span class="req">*</span></label>
+<input id="f-city" name="city" type="text" autocomplete="address-level2" required>
+<div class="err" id="f-city-err"></div></div>
+<div class="field"><label for="f-postcode">Postcode <span class="req">*</span></label>
+<input id="f-postcode" name="postcode" type="text" autocomplete="postal-code" required>
+<div class="err" id="f-postcode-err"></div></div>
+<div class="field"><label for="f-country">Country <span class="req">*</span></label>
+<select id="f-country" name="country" autocomplete="country-name" required>
+<option value="">Select a country</option>
+<option value="Austria">Austria</option><option value="Belgium">Belgium</option><option value="Bulgaria">Bulgaria</option><option value="Croatia">Croatia</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Estonia">Estonia</option><option value="Finland">Finland</option><option value="France">France</option><option value="Germany">Germany</option><option value="Greece">Greece</option><option value="Hungary">Hungary</option><option value="Ireland">Ireland</option><option value="Italy">Italy</option><option value="Latvia">Latvia</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Malta">Malta</option><option value="Netherlands">Netherlands</option><option value="Norway">Norway</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Romania">Romania</option><option value="Slovakia">Slovakia</option><option value="Slovenia">Slovenia</option><option value="Spain">Spain</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="United Kingdom">United Kingdom</option><option value="Other (outside Europe)">Other (outside Europe)</option>
+</select>
+<div class="err" id="f-country-err"></div></div>
+<div class="field"><label for="f-notes">Order notes (optional)</label>
+<textarea id="f-notes" name="notes" rows="3" placeholder="Anything the shop should know about your order"></textarea></div>
+<p><button class="btn" id="place-order" type="submit">Place order request</button></p>
+</form>
+</main>
+<footer>
+<div class="foot">
+<div>
+<h3>Medieval Armour Shop</h3>
+<p>Medieval helmets, armour, swords and more — prices in euros, shipped across Europe. Orders are order requests: the shop confirms your order and payment details by email. No payment is taken on this site.</p>
+</div>
+<div>
+<h3>Shop</h3>
+<a href="/helmets/">Medieval Helmets</a><a href="/armour/">Medieval Armour</a><a href="/swords/">Medieval Swords</a><a href="/medieval-weapons/">Medieval Weapons</a><a href="/templars/">Templar Gear</a><a href="/ancient-rome/">Ancient Rome</a><a href="/costumes/">Medieval Costumes</a><a href="/footwear/">Medieval Footwear</a><a href="/cinema/">Cinema &amp; Film Replicas</a><a href="/elves-fairies/">Elves &amp; Fairies</a><a href="/dolls/">Collector Dolls</a><a href="/trolls/">Trolls</a>
+</div>
+<div>
+<h3>Help</h3>
+<a href="/about/">About the shop</a>
+<a href="/shipping/">Shipping</a>
+<a href="/returns/">Returns</a>
+<a href="/contact/">Contact</a>
+<a href="/faq/">FAQ</a>
+<a href="/cart/">Your cart</a>
+</div>
+</div>
+<div class="copy">&copy; 2026 Medieval Armour Shop. All rights reserved.</div>
+</footer>
+<div id="toast" role="status"></div>
+</body>
+</html>
