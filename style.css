@@ -365,6 +365,11 @@ table.lines { width: 100%; border-collapse: collapse; background: var(--paper); 
 }
 .form .req { color: var(--red); }
 .form .err { color: var(--red); font-size: .88rem; margin-top: .3rem; }
+.pay-methods { border: 1px solid #ccc; border-radius: 6px; padding: .7rem 1rem .9rem; }
+.pay-methods legend { font-weight: 600; font-size: .93rem; padding: 0 .3rem; }
+.pay-note { font-size: .9rem; color: #6b645a; margin-bottom: .6rem; }
+.form .pay-opt { display: flex; align-items: center; gap: .6rem; font-weight: 400; margin-bottom: .45rem; cursor: pointer; }
+.form .pay-opt input { width: auto; }
 .order-box { background: var(--paper); border: 1px solid var(--line); border-radius: 10px; padding: 1.2rem; margin: 1rem 0; }
 .order-box h2 { margin-bottom: .5rem; }
 

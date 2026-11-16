@@ -109,6 +109,14 @@
       if (err) err.textContent = bad ? (id === 'f-email' ? 'Enter a valid email address.' : 'This field is required.') : '';
       if (bad) ok = false;
     });
+    var pay = form.querySelector('input[name="payment"]:checked');
+    var payErr = el('f-payment-err');
+    if (!pay) {
+      if (payErr) payErr.textContent = 'Choose how you would like to pay.';
+      ok = false;
+    } else if (payErr) {
+      payErr.textContent = '';
+    }
     if (!ok) return;
     var total = cart.reduce(function (s, it) { return s + it.price * it.qty; }, 0);
     var order = {
@@ -116,6 +124,7 @@
       date: new Date().toISOString(),
       items: cart,
       total: Math.round(total * 100) / 100,
+      payment: pay.value,
       customer: {
         name: el('f-name').value.trim(),
         email: el('f-email').value.trim(),
@@ -149,6 +158,8 @@
         'Order notes': order.customer.notes || '(none)',
         'Items': itemsText,
         'Order total': MAS.formatEUR(order.total),
+        'Payment method': order.payment,
+        _replyto: order.customer.email,
         _subject: 'New order ' + order.number + ' \u2014 Medieval Armour Shop',
         _template: 'table',
         _captcha: 'false'
@@ -186,6 +197,8 @@
       'Please keep this number for your records.</p>' +
       '<p>The shop will confirm your order and send payment details to <strong>' +
       MAS.escapeHtml(order.customer.email) + '</strong>. No payment has been taken.</p>' +
+      (order.payment ? '<p>Payment method: <strong>' + MAS.escapeHtml(order.payment) +
+      '</strong>.</p>' : '') +
       '<h2>Order summary</h2><table class="lines"><thead><tr><th>Product</th><th>Qty</th><th>Price</th></tr></thead><tbody>';
     order.items.forEach(function (it) {
       html += '<tr><td>' + MAS.escapeHtml(it.name) + '</td><td>' + it.qty +
