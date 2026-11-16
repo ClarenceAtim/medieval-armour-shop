@@ -153,6 +153,7 @@
         'Order number': order.number,
         'Customer name': order.customer.name,
         'Customer email': order.customer.email,
+        email: order.customer.email,
         'Delivery address': order.customer.address + ', ' + order.customer.city + ' ' +
           order.customer.postcode + ', ' + order.customer.country,
         'Order notes': order.customer.notes || '(none)',
