@@ -382,6 +382,39 @@ footer { background: var(--charcoal); color: #a99f8d; padding: 2rem 1rem; font-s
 footer h3 { color: #f5efe2; font-size: 1rem; margin-bottom: .5rem; }
 footer a { color: #cfc6b4; text-decoration: none; display: block; padding: .15rem 0; }
 footer a:hover { color: var(--gold-light); }
+.foot-contact { margin-top: .8rem; }
+.foot-contact a { display: inline; padding: 0; color: var(--gold-light); }
+
+/* ---------- floating call/text tab (right edge, vertically centred) ---------- */
+/* Deliberately NOT bottom-right: a live-chat widget will go there later. */
+.contact-tab {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  z-index: 40;
+}
+.contact-tab-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 52px;
+  min-height: 48px;
+  padding: .5rem .55rem;
+  background: var(--charcoal);
+  color: var(--gold-light);
+  border: 1px solid var(--gold);
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  font-size: .85rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: -2px 2px 8px rgba(0, 0, 0, .25);
+}
+.contact-tab-btn:hover { background: var(--charcoal-2); color: #fff; }
 .copy { text-align: center; margin-top: 1.5rem; font-size: .85rem; color: #7d7466; }
 
 #toast {

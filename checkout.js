@@ -1,7 +1,9 @@
 /* Cart page, checkout form and order confirmation.
-   Orders are order REQUESTS: no payment is taken on this site. The order is
-   saved in the customer's own browser (localStorage) and shown on the
-   confirmation page. The shop confirms the order and payment details by email. */
+   Orders are order REQUESTS: no payment is taken on this site. When the
+   customer places an order, it is emailed to the shop
+   (shopmedievalarmour@gmail.com) via FormSubmit and also saved in the
+   customer's own browser (localStorage) so the confirmation page can
+   show it. The shop confirms the order and payment details by email. */
 (function () {
   'use strict';
   function el(id) { return document.getElementById(id); }
@@ -127,8 +129,38 @@
     var orders = MAS.readLS(MAS.ORDERS_KEY, []);
     orders.push(order);
     MAS.writeLS(MAS.ORDERS_KEY, orders);
-    MAS.saveCart([]);
-    location.href = '/order-confirmation/?order=' + encodeURIComponent(order.number);
+    /* Email the order to the shop (FormSubmit AJAX — same pattern as the
+       Illuminati site's form). Only clear the cart and show the
+       confirmation page once the shop has the order. */
+    var btn = el('place-order');
+    if (btn) { btn.disabled = true; btn.textContent = 'Sending order\u2026'; }
+    var itemsText = cart.map(function (it) {
+      return it.name + ' \u00d7 ' + it.qty + ' \u2014 ' + MAS.formatEUR(it.price * it.qty);
+    }).join('\n');
+    fetch('https://formsubmit.co/ajax/shopmedievalarmour@gmail.com', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        'Order number': order.number,
+        'Customer name': order.customer.name,
+        'Customer email': order.customer.email,
+        'Delivery address': order.customer.address + ', ' + order.customer.city + ' ' +
+          order.customer.postcode + ', ' + order.customer.country,
+        'Order notes': order.customer.notes || '(none)',
+        'Items': itemsText,
+        'Order total': MAS.formatEUR(order.total),
+        _subject: 'New order ' + order.number + ' \u2014 Medieval Armour Shop',
+        _template: 'table',
+        _captcha: 'false'
+      })
+    }).then(function (res) { return res.json(); }).then(function (data) {
+      if (!data || data.success !== 'true') throw new Error('order email failed');
+      MAS.saveCart([]);
+      location.href = '/order-confirmation/?order=' + encodeURIComponent(order.number);
+    }).catch(function () {
+      if (btn) { btn.disabled = false; btn.textContent = 'Place order request'; }
+      MAS.toast('Something went wrong sending your order \u2014 please try again, or email the shop directly at shopmedievalarmour@gmail.com.');
+    });
   }
 
   /* ---------------- confirmation page ---------------- */
